@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X4n-vQ-vRi">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="6Bc-pg-JvC">
+            <objects>
+                <viewController id="EQ9-SH-3W2" customClass="MapViewController" customModule="Canadian_Swiss_Army_Knife" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7LN-XS-E3y">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="T4t-tz-022"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="Az5-gi-D5x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jRS-Y6-Arj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792" y="1854"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="NDU-nx-UKa">
+            <objects>
+                <viewController id="17Y-EF-ssG" customClass="CameraViewController" customModule="Canadian_Swiss_Army_Knife" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kyh-Bm-Jiq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TLV-TY-LK2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Camera" image="camera.on.rectangle" catalog="system" id="6T9-Fh-3vp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ylS-Ob-0YJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792" y="1165"/>
+        </scene>
+        <!--Unit Converter-->
+        <scene sceneID="Qmg-01-kHv">
+            <objects>
+                <viewController id="T0e-Rz-Pe9" customClass="UnitConverterViewController" customModule="Canadian_Swiss_Army_Knife" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pdj-Tx-DFh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SGo-wB-DZf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Unit Converter" image="arrow.left.and.right.square" catalog="system" id="khc-Ap-EXd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldH-4u-fb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792" y="474"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="IxI-No-POo">
+            <objects>
+                <viewController id="XZ9-TL-Wnz" customClass="SearchingViewController" customModule="Canadian_Swiss_Army_Knife" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cR0-ch-Ko3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="I4Y-YF-6yj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="lwh-Qs-TIe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Afk-nB-O5c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792" y="-345"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="oJN-gM-NtO">
+            <objects>
+                <tabBarController id="X4n-vQ-vRi" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KTl-Hw-BeO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="XZ9-TL-Wnz" kind="relationship" relationship="viewControllers" id="oXK-3m-utM"/>
+                        <segue destination="T0e-Rz-Pe9" kind="relationship" relationship="viewControllers" id="zfG-1m-ACh"/>
+                        <segue destination="17Y-EF-ssG" kind="relationship" relationship="viewControllers" id="rcN-Um-vFv"/>
+                        <segue destination="EQ9-SH-3W2" kind="relationship" relationship="viewControllers" id="me5-QE-aoM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c7T-Cp-wJw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-563" y="646"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.left.and.right.square" catalog="system" width="128" height="114"/>
+        <image name="camera.on.rectangle" catalog="system" width="128" height="98"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="map" catalog="system" width="128" height="112"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

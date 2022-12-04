@@ -6,7 +6,7 @@ We want to show you how we collaborate on GitHub, using pull requests.
 
 ## Team Members
 
-- [Huajie (Jay) Jin](https://github.com/huajiejin)
+- [Jay (Huajie) Jin](https://github.com/huajiejin)
 - [Ravali krishna velpuri](https://github.com/ravalikrishna5121)
 - [Tim Jo](https://github.com/tim00vj)
 - [Mengcheng Liu](https://github.com/Liuguo320)
