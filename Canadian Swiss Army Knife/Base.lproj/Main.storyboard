@@ -58,20 +58,106 @@
             <point key="canvasLocation" x="792" y="474"/>
         </scene>
         <!--Home-->
-        <scene sceneID="IxI-No-POo">
+        <scene sceneID="hpG-67-4m6">
             <objects>
-                <viewController id="XZ9-TL-Wnz" customClass="SearchingViewController" customModule="Canadian_Swiss_Army_Knife" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cR0-ch-Ko3">
+                <navigationController id="ghE-Gd-Ib8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="ag0-sX-rd7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dat-2w-ZLB">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gdu-fC-yhE" kind="relationship" relationship="rootViewController" id="V5H-e3-PfW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVu-hD-Wxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792" y="-223"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="Y5K-ZW-h7Z">
+            <objects>
+                <viewController id="gdu-fC-yhE" customClass="SearchViewController" customModule="Canadian_Swiss_Army_Knife" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G1Y-TQ-7Ur">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="I4Y-YF-6yj"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ijD-bp-vg1">
+                                <rect key="frame" x="16" y="119" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uV-tJ-I6k">
+                                <rect key="frame" x="0.0" y="169" width="393" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rs8-XC-nHV">
+                                <rect key="frame" x="16" y="401" width="361" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Search"/>
+                                <connections>
+                                    <action selector="search:" destination="gdu-fC-yhE" eventType="touchUpInside" id="iAj-MG-UOm"/>
+                                    <segue destination="7eZ-gA-Ifl" kind="show" identifier="SearchResult" id="Zsb-1X-FEf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pUU-x1-TM7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5uV-tJ-I6k" firstAttribute="top" secondItem="ijD-bp-vg1" secondAttribute="bottom" constant="16" id="0zb-9b-Mhl"/>
+                            <constraint firstItem="5uV-tJ-I6k" firstAttribute="trailing" secondItem="pUU-x1-TM7" secondAttribute="trailing" id="EW0-Bl-6hp"/>
+                            <constraint firstItem="ijD-bp-vg1" firstAttribute="leading" secondItem="pUU-x1-TM7" secondAttribute="leading" constant="16" id="OGX-Di-UQZ"/>
+                            <constraint firstItem="5uV-tJ-I6k" firstAttribute="leading" secondItem="pUU-x1-TM7" secondAttribute="leading" id="Sel-2C-tyt"/>
+                            <constraint firstItem="ijD-bp-vg1" firstAttribute="top" secondItem="pUU-x1-TM7" secondAttribute="top" constant="16" id="Y7N-mY-k0q"/>
+                            <constraint firstItem="pUU-x1-TM7" firstAttribute="trailing" secondItem="rs8-XC-nHV" secondAttribute="trailing" constant="16" id="iXT-Lm-NAm"/>
+                            <constraint firstItem="pUU-x1-TM7" firstAttribute="trailing" secondItem="ijD-bp-vg1" secondAttribute="trailing" constant="16" id="qMo-D8-eV3"/>
+                            <constraint firstItem="rs8-XC-nHV" firstAttribute="leading" secondItem="pUU-x1-TM7" secondAttribute="leading" constant="16" id="v7y-SS-N3j"/>
+                            <constraint firstItem="rs8-XC-nHV" firstAttribute="top" secondItem="5uV-tJ-I6k" secondAttribute="bottom" constant="16" id="vp8-S2-Xji"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="lwh-Qs-TIe"/>
+                    <navigationItem key="navigationItem" title="Search" id="V6R-YL-gIP"/>
+                    <connections>
+                        <outlet property="searchFieldPicker" destination="5uV-tJ-I6k" id="QJX-mf-Mhf"/>
+                        <outlet property="searchTextField" destination="ijD-bp-vg1" id="QLT-Sp-c3R"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Afk-nB-O5c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VUA-qQ-FAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792" y="-345"/>
+            <point key="canvasLocation" x="1521" y="-223"/>
+        </scene>
+        <!--Search Result-->
+        <scene sceneID="kJp-D5-RA5">
+            <objects>
+                <viewController id="7eZ-gA-Ifl" customClass="SearchResultViewController" customModule="Canadian_Swiss_Army_Knife" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dgS-NT-JAh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7n-NF-SmP">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fgd-1p-mhI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="U7n-NF-SmP" firstAttribute="top" secondItem="fgd-1p-mhI" secondAttribute="top" id="BVu-zY-nOp"/>
+                            <constraint firstItem="fgd-1p-mhI" firstAttribute="trailing" secondItem="U7n-NF-SmP" secondAttribute="trailing" id="MfE-jE-8LX"/>
+                            <constraint firstItem="fgd-1p-mhI" firstAttribute="bottom" secondItem="U7n-NF-SmP" secondAttribute="bottom" id="Yhh-Tj-rKG"/>
+                            <constraint firstItem="U7n-NF-SmP" firstAttribute="leading" secondItem="fgd-1p-mhI" secondAttribute="leading" id="cU5-s6-OWx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search Result" id="3do-Jo-6i7"/>
+                    <connections>
+                        <outlet property="searchResultWebView" destination="U7n-NF-SmP" id="LXE-Aq-ZCh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l1T-H4-Iy9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2256" y="-223"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="oJN-gM-NtO">
@@ -83,7 +169,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="XZ9-TL-Wnz" kind="relationship" relationship="viewControllers" id="oXK-3m-utM"/>
+                        <segue destination="ghE-Gd-Ib8" kind="relationship" relationship="viewControllers" id="Z2z-Ok-5LC"/>
                         <segue destination="T0e-Rz-Pe9" kind="relationship" relationship="viewControllers" id="zfG-1m-ACh"/>
                         <segue destination="17Y-EF-ssG" kind="relationship" relationship="viewControllers" id="rcN-Um-vFv"/>
                         <segue destination="EQ9-SH-3W2" kind="relationship" relationship="viewControllers" id="me5-QE-aoM"/>

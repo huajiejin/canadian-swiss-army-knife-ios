@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C141EB7293D491A00F532CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C141EB6293D491A00F532CB /* AppDelegate.swift */; };
 		3C141EB9293D491A00F532CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C141EB8293D491A00F532CB /* SceneDelegate.swift */; };
-		3C141EBB293D491A00F532CB /* SearchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C141EBA293D491A00F532CB /* SearchingViewController.swift */; };
+		3C141EBB293D491A00F532CB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C141EBA293D491A00F532CB /* SearchViewController.swift */; };
 		3C141EBE293D491A00F532CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C141EBC293D491A00F532CB /* Main.storyboard */; };
 		3C141EC1293D491A00F532CB /* Canadian_Swiss_Army_Knife.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C141EBF293D491A00F532CB /* Canadian_Swiss_Army_Knife.xcdatamodeld */; };
 		3C141EC3293D491B00F532CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C141EC2293D491B00F532CB /* Assets.xcassets */; };
@@ -17,13 +17,14 @@
 		3C141ECE293D4A2200F532CB /* UnitConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C141ECD293D4A2200F532CB /* UnitConverterViewController.swift */; };
 		3C141ED0293D4AAF00F532CB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C141ECF293D4AAF00F532CB /* CameraViewController.swift */; };
 		3C141ED2293D4ACF00F532CB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C141ED1293D4ACF00F532CB /* MapViewController.swift */; };
+		3C3C882B29403CB300667C3C /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C882A29403CB300667C3C /* SearchResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C141EB3293D491A00F532CB /* Canadian Swiss Army Knife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Canadian Swiss Army Knife.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C141EB6293D491A00F532CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C141EB8293D491A00F532CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3C141EBA293D491A00F532CB /* SearchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingViewController.swift; sourceTree = "<group>"; };
+		3C141EBA293D491A00F532CB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		3C141EBD293D491A00F532CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C141EC0293D491A00F532CB /* Canadian_Swiss_Army_Knife.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Canadian_Swiss_Army_Knife.xcdatamodel; sourceTree = "<group>"; };
 		3C141EC2293D491B00F532CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,6 +33,7 @@
 		3C141ECD293D4A2200F532CB /* UnitConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitConverterViewController.swift; sourceTree = "<group>"; };
 		3C141ECF293D4AAF00F532CB /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		3C141ED1293D4ACF00F532CB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3C3C882A29403CB300667C3C /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +68,8 @@
 			children = (
 				3C141EB6293D491A00F532CB /* AppDelegate.swift */,
 				3C141EB8293D491A00F532CB /* SceneDelegate.swift */,
-				3C141EBA293D491A00F532CB /* SearchingViewController.swift */,
+				3C141EBA293D491A00F532CB /* SearchViewController.swift */,
+				3C3C882A29403CB300667C3C /* SearchResultViewController.swift */,
 				3C141ECD293D4A2200F532CB /* UnitConverterViewController.swift */,
 				3C141ECF293D4AAF00F532CB /* CameraViewController.swift */,
 				3C141ED1293D4ACF00F532CB /* MapViewController.swift */,
@@ -150,12 +153,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C141EBB293D491A00F532CB /* SearchingViewController.swift in Sources */,
+				3C141EBB293D491A00F532CB /* SearchViewController.swift in Sources */,
 				3C141EC1293D491A00F532CB /* Canadian_Swiss_Army_Knife.xcdatamodeld in Sources */,
 				3C141EB7293D491A00F532CB /* AppDelegate.swift in Sources */,
 				3C141EB9293D491A00F532CB /* SceneDelegate.swift in Sources */,
 				3C141ECE293D4A2200F532CB /* UnitConverterViewController.swift in Sources */,
 				3C141ED0293D4AAF00F532CB /* CameraViewController.swift in Sources */,
+				3C3C882B29403CB300667C3C /* SearchResultViewController.swift in Sources */,
 				3C141ED2293D4ACF00F532CB /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
