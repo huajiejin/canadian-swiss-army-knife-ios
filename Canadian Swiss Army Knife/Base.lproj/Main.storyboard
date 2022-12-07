@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -17,10 +18,25 @@
                     <view key="view" contentMode="scaleToFill" id="7LN-XS-E3y">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RmC-iF-I60">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="T4t-tz-022"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T4t-tz-022" firstAttribute="bottom" secondItem="RmC-iF-I60" secondAttribute="bottom" id="czY-PQ-EGw"/>
+                            <constraint firstItem="RmC-iF-I60" firstAttribute="leading" secondItem="T4t-tz-022" secondAttribute="leading" id="flQ-lW-ecV"/>
+                            <constraint firstItem="T4t-tz-022" firstAttribute="trailing" secondItem="RmC-iF-I60" secondAttribute="trailing" id="gp4-JY-qi5"/>
+                            <constraint firstItem="RmC-iF-I60" firstAttribute="top" secondItem="T4t-tz-022" secondAttribute="top" id="xHD-VI-8Ru"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="Az5-gi-D5x"/>
+                    <connections>
+                        <outlet property="map" destination="RmC-iF-I60" id="hm2-Gh-5wN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRS-Y6-Arj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
