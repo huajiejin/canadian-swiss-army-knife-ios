@@ -18,6 +18,8 @@
 		3C141ED0293D4AAF00F532CB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C141ECF293D4AAF00F532CB /* CameraViewController.swift */; };
 		3C141ED2293D4ACF00F532CB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C141ED1293D4ACF00F532CB /* MapViewController.swift */; };
 		3C3C882B29403CB300667C3C /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C882A29403CB300667C3C /* SearchResultViewController.swift */; };
+		3C3C882D29404F6800667C3C /* UnitConverterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C882C29404F6800667C3C /* UnitConverterCollectionViewCell.swift */; };
+		3C3C8832294060E400667C3C /* LengthUnitConverterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C8830294060E400667C3C /* LengthUnitConverterDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		3C141ECF293D4AAF00F532CB /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		3C141ED1293D4ACF00F532CB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3C3C882A29403CB300667C3C /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		3C3C882C29404F6800667C3C /* UnitConverterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitConverterCollectionViewCell.swift; sourceTree = "<group>"; };
+		3C3C8830294060E400667C3C /* LengthUnitConverterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LengthUnitConverterDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 				3C141EBA293D491A00F532CB /* SearchViewController.swift */,
 				3C3C882A29403CB300667C3C /* SearchResultViewController.swift */,
 				3C141ECD293D4A2200F532CB /* UnitConverterViewController.swift */,
+				3C3C8830294060E400667C3C /* LengthUnitConverterDetailViewController.swift */,
+				3C3C882C29404F6800667C3C /* UnitConverterCollectionViewCell.swift */,
 				3C141ECF293D4AAF00F532CB /* CameraViewController.swift */,
 				3C141ED1293D4ACF00F532CB /* MapViewController.swift */,
 				3C141EBC293D491A00F532CB /* Main.storyboard */,
@@ -156,8 +162,10 @@
 				3C141EBB293D491A00F532CB /* SearchViewController.swift in Sources */,
 				3C141EC1293D491A00F532CB /* Canadian_Swiss_Army_Knife.xcdatamodeld in Sources */,
 				3C141EB7293D491A00F532CB /* AppDelegate.swift in Sources */,
+				3C3C882D29404F6800667C3C /* UnitConverterCollectionViewCell.swift in Sources */,
 				3C141EB9293D491A00F532CB /* SceneDelegate.swift in Sources */,
 				3C141ECE293D4A2200F532CB /* UnitConverterViewController.swift in Sources */,
+				3C3C8832294060E400667C3C /* LengthUnitConverterDetailViewController.swift in Sources */,
 				3C141ED0293D4AAF00F532CB /* CameraViewController.swift in Sources */,
 				3C3C882B29403CB300667C3C /* SearchResultViewController.swift in Sources */,
 				3C141ED2293D4ACF00F532CB /* MapViewController.swift in Sources */,
