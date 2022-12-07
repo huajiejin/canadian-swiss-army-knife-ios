@@ -33,10 +33,25 @@
                     <view key="view" contentMode="scaleToFill" id="kyh-Bm-Jiq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tEF-1J-FRA" customClass="CameraPreviewView" customModule="Canadian_Swiss_Army_Knife" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="TLV-TY-LK2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tEF-1J-FRA" firstAttribute="top" secondItem="TLV-TY-LK2" secondAttribute="top" id="Yey-Wf-ery"/>
+                            <constraint firstItem="TLV-TY-LK2" firstAttribute="trailing" secondItem="tEF-1J-FRA" secondAttribute="trailing" id="bIH-dk-Y3H"/>
+                            <constraint firstItem="TLV-TY-LK2" firstAttribute="bottom" secondItem="tEF-1J-FRA" secondAttribute="bottom" id="hHZ-Nz-EOm"/>
+                            <constraint firstItem="tEF-1J-FRA" firstAttribute="leading" secondItem="TLV-TY-LK2" secondAttribute="leading" id="qAw-1f-CVH"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" image="camera.on.rectangle" catalog="system" id="6T9-Fh-3vp"/>
+                    <connections>
+                        <outlet property="cameraPreview" destination="tEF-1J-FRA" id="Wag-tg-hAf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ylS-Ob-0YJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
