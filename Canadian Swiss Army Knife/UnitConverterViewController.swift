@@ -10,7 +10,7 @@ import UIKit
 class UnitConverterViewController: UIViewController {
     
     @IBOutlet weak var unitConverterCollectionView: UICollectionView!
-    var unitCellMetaDataList = [["Length", "line.diagonal.arrow"], ["Area", "rectangle"], ["Volume", "cup.and.saucer"], ["More", "table.badge.more"]]
+    var unitCellMetaDataList = [[LocalizedStrings.Length, "line.diagonal.arrow"], [LocalizedStrings.Area, "rectangle"], [LocalizedStrings.Volume, "cup.and.saucer"], [LocalizedStrings.More, "table.badge.more"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ extension UnitConverterViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let unitCellMetaData = unitCellMetaDataList[indexPath.row]
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        if unitCellMetaData[0] == "Length" {
+        if unitCellMetaData[0] == LocalizedStrings.Length {
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "LengthUnitConverterDetail")
             self.present(nextViewController, animated:true, completion:nil)
         } else {

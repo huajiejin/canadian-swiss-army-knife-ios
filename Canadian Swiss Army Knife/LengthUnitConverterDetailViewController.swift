@@ -30,15 +30,15 @@ class LengthUnitConverterDetailViewController: UIViewController {
     var selectedUnitConversionRecordIndexPath: IndexPath?
     
     @IBAction func cmEditingDidEnd(_ sender: Any) {
-        length = Measurement(value: Double(lengthInCentimetersTextField.text ?? "") ?? 0, unit: .centimeters)
+        length = Measurement(value: textToDouble(lengthInCentimetersTextField.text), unit: .centimeters)
         lengthInInchesTextField.text = "\(lengthInInches)"
-        createUnitConversionRecord("\(lengthInCentimeters)", "cm", "\(lengthInInches)", "inch")
+        createUnitConversionRecord("\(lengthInCentimeters)", "cm", "\(lengthInInches)", LocalizedStrings.inch)
     }
     
     @IBAction func inchEditingDidEnd(_ sender: Any) {
-        length = Measurement(value: Double(lengthInInchesTextField.text ?? "") ?? 0, unit: .inches)
+        length = Measurement(value: textToDouble(lengthInInchesTextField.text), unit: .inches)
         lengthInCentimetersTextField.text = "\(lengthInCentimeters)"
-        createUnitConversionRecord("\(lengthInInches)", "inch", "\(lengthInCentimeters)", "cm")
+        createUnitConversionRecord("\(lengthInInches)", LocalizedStrings.inch, "\(lengthInCentimeters)", "cm")
     }
     
     override func viewDidLoad() {
@@ -92,7 +92,7 @@ class LengthUnitConverterDetailViewController: UIViewController {
         if let indexPath = indexPath {
             becomeFirstResponder()
             let menu = UIMenuController.shared
-            let deleteMenuItem = UIMenuItem(title: "Delete", action: #selector(self.onDeleteHistory(_:)))
+            let deleteMenuItem = UIMenuItem(title: LocalizedStrings.Delete, action: #selector(self.onDeleteHistory(_:)))
             menu.menuItems = [deleteMenuItem]
             menu.setTargetRect(CGRect(x: positon.x, y: positon.y, width: 2, height: 2), in: unitConversionHistoryTable)
             menu.setMenuVisible(true, animated: true)
@@ -120,6 +120,11 @@ class LengthUnitConverterDetailViewController: UIViewController {
         unitConversionRecord?.setValue(originUnit, forKey: "originUnit")
         unitConversionRecord?.setValue(targetValue, forKey: "targetValue")
         unitConversionRecord?.setValue(targetUnit, forKey: "targetUnit")
+    }
+    
+    func textToDouble(_ text: String?) -> Double {
+        let decimalSeparator = NSLocale.current.decimalSeparator! as String
+        return Double((text ?? "").replacingOccurrences(of: decimalSeparator, with: ".")) ?? 0
     }
 }
 

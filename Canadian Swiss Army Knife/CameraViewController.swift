@@ -29,9 +29,9 @@ class CameraViewController: UIViewController {
             })
         }
         else {
-            let alert = UIAlertController(title: "Do not have access to the camera", message: "Please turn it on in Settings", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-            alert.addAction(UIAlertAction(title: "OK", style: .default) {_ in
+            let alert = UIAlertController(title: LocalizedStrings.DoNotHaveAccessToTheCamera, message: LocalizedStrings.PleaseTurnItOnInSettings, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: LocalizedStrings.Cancel, style: .cancel))
+            alert.addAction(UIAlertAction(title: LocalizedStrings.OK, style: .default) {_ in
                 guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
                 if UIApplication.shared.canOpenURL(url) {
                     UIApplication.shared.open(url)

@@ -1,0 +1,48 @@
+
+/* Class = "UINavigationItem"; title = "Search Result"; ObjectID = "3do-Jo-6i7"; */
+"3do-Jo-6i7.title" = "Search Result";
+
+/* Class = "UITabBarItem"; title = "Camera"; ObjectID = "6T9-Fh-3vp"; */
+"6T9-Fh-3vp.title" = "Camera";
+
+/* Class = "UILabel"; text = "Coming soon..."; ObjectID = "7hK-6J-sdN"; */
+"7hK-6J-sdN.text" = "Coming soon...";
+
+/* Class = "UITabBarItem"; title = "Map"; ObjectID = "Az5-gi-D5x"; */
+"Az5-gi-D5x.title" = "Map";
+
+/* Class = "UILabel"; text = "cm"; ObjectID = "E2T-YS-QCx"; */
+"E2T-YS-QCx.text" = "cm";
+
+/* Class = "UINavigationItem"; title = "Search"; ObjectID = "V6R-YL-gIP"; */
+"V6R-YL-gIP.title" = "Search";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "ag0-sX-rd7"; */
+"ag0-sX-rd7.title" = "Home";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "clw-tM-9xv"; */
+"clw-tM-9xv.text" = "Title";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "e9b-Rk-x6K"; */
+"e9b-Rk-x6K.text" = "Title";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "fob-5g-Bc7"; */
+"fob-5g-Bc7.text" = "Subtitle";
+
+/* Class = "UITextField"; placeholder = "Search"; ObjectID = "ijD-bp-vg1"; */
+"ijD-bp-vg1.placeholder" = "Search";
+
+/* Class = "UITabBarItem"; title = "Unit Converter"; ObjectID = "khc-Ap-EXd"; */
+"khc-Ap-EXd.title" = "Unit Converter";
+
+/* Class = "UIButton"; configuration.title = "Search"; ObjectID = "rs8-XC-nHV"; */
+"rs8-XC-nHV.configuration.title" = "Search";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rs8-XC-nHV"; */
+"rs8-XC-nHV.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "u8b-fu-mb1"; */
+"u8b-fu-mb1.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "inch"; ObjectID = "uIC-ng-8My"; */
+"uIC-ng-8My.text" = "inch";

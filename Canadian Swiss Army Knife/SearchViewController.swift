@@ -73,7 +73,7 @@ class SearchViewController: UIViewController {
         if let indexPath = indexPath {
             becomeFirstResponder()
             let menu = UIMenuController.shared
-            let deleteMenuItem = UIMenuItem(title: "Delete", action: #selector(self.onDeleteHistory(_:)))
+            let deleteMenuItem = UIMenuItem(title: LocalizedStrings.Delete, action: #selector(self.onDeleteHistory(_:)))
             menu.menuItems = [deleteMenuItem]
             menu.setTargetRect(CGRect(x: positon.x, y: positon.y, width: 2, height: 2), in: searchHistoryTable)
             menu.setMenuVisible(true, animated: true)
