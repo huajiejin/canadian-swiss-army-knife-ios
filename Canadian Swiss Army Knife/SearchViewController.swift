@@ -18,6 +18,7 @@ class SearchViewController: UIViewController {
     }
     var container: NSPersistentContainer!
     var searchRecords: [SearchRecord] = []
+    var selectedSearchRecordIndexPath: IndexPath?
     
     @IBOutlet weak var searchFieldPicker: UIPickerView!
     @IBOutlet weak var searchTextField: UITextField!
@@ -35,6 +36,7 @@ class SearchViewController: UIViewController {
         
         searchHistoryTable.delegate = self
         searchHistoryTable.dataSource = self
+        searchHistoryTable.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(self.onSearchHistoryTableLongPressed(longPressGesture:))))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +62,34 @@ class SearchViewController: UIViewController {
             }
         default:
             preconditionFailure("Unexpected segue id")
+        }
+    }
+    
+    @objc func onSearchHistoryTableLongPressed(longPressGesture: UILongPressGestureRecognizer) {
+        let positon = longPressGesture.location(in: searchHistoryTable)
+        let indexPath = searchHistoryTable.indexPathForRow(at: positon)
+        if let indexPath = indexPath {
+            becomeFirstResponder()
+            let menu = UIMenuController.shared
+            let deleteMenuItem = UIMenuItem(title: "Delete", action: #selector(self.onDeleteHistory(_:)))
+            menu.menuItems = [deleteMenuItem]
+            menu.setTargetRect(CGRect(x: positon.x, y: positon.y, width: 2, height: 2), in: searchHistoryTable)
+            menu.setMenuVisible(true, animated: true)
+            selectedSearchRecordIndexPath = indexPath
+        }
+    }
+    
+    @objc func onDeleteHistory(_ sender: AnyObject) {
+        if let indexPath = selectedSearchRecordIndexPath {
+            container?.viewContext.delete(searchRecords[indexPath.row])
+            do {
+                try container?.viewContext.save()
+            } catch {
+                print("\(error)")
+            }
+            searchRecords.remove(at: indexPath.row)
+            searchHistoryTable.deleteRows(at: [indexPath], with: .automatic)
+            selectedSearchRecordIndexPath = nil
         }
     }
     
