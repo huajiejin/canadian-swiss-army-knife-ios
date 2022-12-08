@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="SearchRecord" representedClassName="SearchRecord" syncable="YES" codeGenerationType="class">
+        <attribute name="searchField" optional="YES" attributeType="String"/>
+        <attribute name="searchRecordID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="searchText" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="UnitConversionRecord" representedClassName="UnitConversionRecord" syncable="YES" codeGenerationType="class">
+        <attribute name="originUnit" optional="YES" attributeType="String"/>
+        <attribute name="originValue" optional="YES" attributeType="String"/>
+        <attribute name="targetUnit" optional="YES" attributeType="String"/>
+        <attribute name="targetValue" optional="YES" attributeType="String"/>
+        <attribute name="unitConversionRecordID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
 </model>

@@ -102,7 +102,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="281.33333333333331" height="148.33333333333334"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S0d-3G-0nM">
-                                                            <rect key="frame" x="115.66666666666669" y="0.0" width="50" height="140.33333333333337"/>
+                                                            <rect key="frame" x="115.66666666666669" y="0.0" width="50" height="140.33333333333334"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kF1-xQ-xhK">
                                                             <rect key="frame" x="140.66666666666666" y="148.33333333333334" width="0.0" height="0.0"/>
@@ -177,28 +177,67 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uV-tJ-I6k">
-                                <rect key="frame" x="0.0" y="169" width="393" height="216"/>
+                            <pickerView contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="5uV-tJ-I6k">
+                                <rect key="frame" x="0.0" y="153" width="393" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="wGM-mB-Yul"/>
+                                </constraints>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rs8-XC-nHV">
-                                <rect key="frame" x="16" y="401" width="361" height="35"/>
+                                <rect key="frame" x="16" y="289" width="361" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Search"/>
                                 <connections>
-                                    <action selector="search:" destination="gdu-fC-yhE" eventType="touchUpInside" id="iAj-MG-UOm"/>
                                     <segue destination="7eZ-gA-Ifl" kind="show" identifier="SearchResult" id="Zsb-1X-FEf"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zBw-Kc-db5">
+                                <rect key="frame" x="16" y="340" width="361" height="413"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchHistory" textLabel="clw-tM-9xv" detailTextLabel="u8b-fu-mb1" style="IBUITableViewCellStyleValue1" id="P0A-Zw-nhv">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P0A-Zw-nhv" id="U4R-zZ-qqO">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="clw-tM-9xv">
+                                                    <rect key="frame" x="20" y="15" width="25" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u8b-fu-mb1">
+                                                    <rect key="frame" x="297.33333333333331" y="15" width="43.666666666666664" height="14.333333333333334"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="7eZ-gA-Ifl" kind="show" identifier="SearchResultFromHistory" id="krK-fQ-loZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pUU-x1-TM7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5uV-tJ-I6k" firstAttribute="top" secondItem="ijD-bp-vg1" secondAttribute="bottom" constant="16" id="0zb-9b-Mhl"/>
+                            <constraint firstItem="5uV-tJ-I6k" firstAttribute="top" secondItem="ijD-bp-vg1" secondAttribute="bottom" id="0zb-9b-Mhl"/>
                             <constraint firstItem="5uV-tJ-I6k" firstAttribute="trailing" secondItem="pUU-x1-TM7" secondAttribute="trailing" id="EW0-Bl-6hp"/>
+                            <constraint firstItem="zBw-Kc-db5" firstAttribute="leading" secondItem="pUU-x1-TM7" secondAttribute="leading" constant="16" id="F1s-hN-Gll"/>
                             <constraint firstItem="ijD-bp-vg1" firstAttribute="leading" secondItem="pUU-x1-TM7" secondAttribute="leading" constant="16" id="OGX-Di-UQZ"/>
                             <constraint firstItem="5uV-tJ-I6k" firstAttribute="leading" secondItem="pUU-x1-TM7" secondAttribute="leading" id="Sel-2C-tyt"/>
                             <constraint firstItem="ijD-bp-vg1" firstAttribute="top" secondItem="pUU-x1-TM7" secondAttribute="top" constant="16" id="Y7N-mY-k0q"/>
+                            <constraint firstItem="pUU-x1-TM7" firstAttribute="trailing" secondItem="zBw-Kc-db5" secondAttribute="trailing" constant="16" id="bIl-Ss-ahO"/>
                             <constraint firstItem="pUU-x1-TM7" firstAttribute="trailing" secondItem="rs8-XC-nHV" secondAttribute="trailing" constant="16" id="iXT-Lm-NAm"/>
+                            <constraint firstItem="pUU-x1-TM7" firstAttribute="bottom" secondItem="zBw-Kc-db5" secondAttribute="bottom" constant="16" id="kcT-q6-Xtu"/>
+                            <constraint firstItem="zBw-Kc-db5" firstAttribute="top" secondItem="rs8-XC-nHV" secondAttribute="bottom" constant="16" id="lH4-bS-aXU"/>
                             <constraint firstItem="pUU-x1-TM7" firstAttribute="trailing" secondItem="ijD-bp-vg1" secondAttribute="trailing" constant="16" id="qMo-D8-eV3"/>
                             <constraint firstItem="rs8-XC-nHV" firstAttribute="leading" secondItem="pUU-x1-TM7" secondAttribute="leading" constant="16" id="v7y-SS-N3j"/>
                             <constraint firstItem="rs8-XC-nHV" firstAttribute="top" secondItem="5uV-tJ-I6k" secondAttribute="bottom" constant="16" id="vp8-S2-Xji"/>
@@ -207,6 +246,7 @@
                     <navigationItem key="navigationItem" title="Search" id="V6R-YL-gIP"/>
                     <connections>
                         <outlet property="searchFieldPicker" destination="5uV-tJ-I6k" id="QJX-mf-Mhf"/>
+                        <outlet property="searchHistoryTable" destination="zBw-Kc-db5" id="bBk-7Z-9VE"/>
                         <outlet property="searchTextField" destination="ijD-bp-vg1" id="QLT-Sp-c3R"/>
                     </connections>
                 </viewController>
@@ -273,7 +313,7 @@
         <scene sceneID="XnC-MN-a5t">
             <objects>
                 <viewController storyboardIdentifier="LengthUnitConverterDetail" id="HvY-kW-q9y" customClass="LengthUnitConverterDetailViewController" customModule="Canadian_Swiss_Army_Knife" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="N4Z-45-B1q">
+                    <view key="view" contentMode="scaleToFill" id="N4Z-45-B1q">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -370,6 +410,9 @@
             <point key="canvasLocation" x="2256" y="474"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="krK-fQ-loZ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.left.and.right.square" catalog="system" width="128" height="114"/>
         <image name="camera.on.rectangle" catalog="system" width="128" height="98"/>
