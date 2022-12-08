@@ -27,6 +27,7 @@ class LengthUnitConverterDetailViewController: UIViewController {
             return length.converted(to: .inches).value
         }
     }
+    var selectedUnitConversionRecordIndexPath: IndexPath?
     
     @IBAction func cmEditingDidEnd(_ sender: Any) {
         length = Measurement(value: Double(lengthInCentimetersTextField.text ?? "") ?? 0, unit: .centimeters)
@@ -52,11 +53,44 @@ class LengthUnitConverterDetailViewController: UIViewController {
         
         unitConversionHistoryTable.delegate = self
         unitConversionHistoryTable.dataSource = self
+        unitConversionHistoryTable.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(self.onUnitConversionHistoryTableLongPressed(longPressGesture:))))
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchUnitConversionRecords()
+    }
+    
+    @objc func onUnitConversionHistoryTableLongPressed(longPressGesture: UILongPressGestureRecognizer) {
+        let positon = longPressGesture.location(in: unitConversionHistoryTable)
+        let indexPath = unitConversionHistoryTable.indexPathForRow(at: positon)
+        showDeleteHistoryMenu(positon, indexPath)
+    }
+    
+    @objc func onDeleteHistory(_ sender: AnyObject) {
+        if let indexPath = selectedUnitConversionRecordIndexPath {
+            container?.viewContext.delete(unitConversionRecords[indexPath.row])
+            do {
+                try container?.viewContext.save()
+            } catch {
+                print("\(error)")
+            }
+            unitConversionRecords.remove(at: indexPath.row)
+            unitConversionHistoryTable.deleteRows(at: [indexPath], with: .automatic)
+            selectedUnitConversionRecordIndexPath = nil
+        }
+    }
+    
+    func showDeleteHistoryMenu(_ positon: CGPoint, _ indexPath: IndexPath?) {
+        if let indexPath = indexPath {
+            becomeFirstResponder()
+            let menu = UIMenuController.shared
+            let deleteMenuItem = UIMenuItem(title: "Delete", action: #selector(self.onDeleteHistory(_:)))
+            menu.menuItems = [deleteMenuItem]
+            menu.setTargetRect(CGRect(x: positon.x, y: positon.y, width: 2, height: 2), in: unitConversionHistoryTable)
+            menu.setMenuVisible(true, animated: true)
+            selectedUnitConversionRecordIndexPath = indexPath
+        }
     }
 
     func fetchUnitConversionRecords() {
