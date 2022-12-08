@@ -37,6 +37,8 @@ class SearchViewController: UIViewController {
         searchHistoryTable.delegate = self
         searchHistoryTable.dataSource = self
         searchHistoryTable.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(self.onSearchHistoryTableLongPressed(longPressGesture:))))
+        
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.onViewTapped(tapGesture:))))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -91,6 +93,10 @@ class SearchViewController: UIViewController {
             searchHistoryTable.deleteRows(at: [indexPath], with: .automatic)
             selectedSearchRecordIndexPath = nil
         }
+    }
+    
+    @objc func onViewTapped(tapGesture: UITapGestureRecognizer) {
+        searchTextField.resignFirstResponder()
     }
     
     func fetchSearchRecords() {

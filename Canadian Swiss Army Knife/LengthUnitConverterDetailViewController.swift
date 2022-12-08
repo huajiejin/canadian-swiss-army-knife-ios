@@ -54,6 +54,8 @@ class LengthUnitConverterDetailViewController: UIViewController {
         unitConversionHistoryTable.delegate = self
         unitConversionHistoryTable.dataSource = self
         unitConversionHistoryTable.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(self.onUnitConversionHistoryTableLongPressed(longPressGesture:))))
+        
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.onViewTapped(tapGesture:))))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -79,6 +81,11 @@ class LengthUnitConverterDetailViewController: UIViewController {
             unitConversionHistoryTable.deleteRows(at: [indexPath], with: .automatic)
             selectedUnitConversionRecordIndexPath = nil
         }
+    }
+    
+    @objc func onViewTapped(tapGesture: UITapGestureRecognizer) {
+        lengthInCentimetersTextField.resignFirstResponder()
+        lengthInInchesTextField.resignFirstResponder()
     }
     
     func showDeleteHistoryMenu(_ positon: CGPoint, _ indexPath: IndexPath?) {
