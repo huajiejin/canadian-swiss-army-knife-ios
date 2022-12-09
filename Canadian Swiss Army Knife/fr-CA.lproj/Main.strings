@@ -1,33 +1,33 @@
 
 /* Class = "UINavigationItem"; title = "Search Result"; ObjectID = "3do-Jo-6i7"; */
-"3do-Jo-6i7.title" = "Search Result";
+"3do-Jo-6i7.title" = "Résultat de la recherche";
 
 /* Class = "UITabBarItem"; title = "Camera"; ObjectID = "6T9-Fh-3vp"; */
-"6T9-Fh-3vp.title" = "Camera";
+"6T9-Fh-3vp.title" = "Caméra";
 
 /* Class = "UILabel"; text = "Coming soon..."; ObjectID = "7hK-6J-sdN"; */
-"7hK-6J-sdN.text" = "Coming soon...";
+"7hK-6J-sdN.text" = "Bientôt disponible...";
 
 /* Class = "UITabBarItem"; title = "Map"; ObjectID = "Az5-gi-D5x"; */
-"Az5-gi-D5x.title" = "Map";
+"Az5-gi-D5x.title" = "Carte";
 
 /* Class = "UILabel"; text = "cm"; ObjectID = "E2T-YS-QCx"; */
 "E2T-YS-QCx.text" = "cm";
 
 /* Class = "UINavigationItem"; title = "Search"; ObjectID = "V6R-YL-gIP"; */
-"V6R-YL-gIP.title" = "Search";
+"V6R-YL-gIP.title" = "Chercher";
 
 /* Class = "UITabBarItem"; title = "Home"; ObjectID = "ag0-sX-rd7"; */
-"ag0-sX-rd7.title" = "Home";
+"ag0-sX-rd7.title" = "Maison";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "clw-tM-9xv"; */
-"clw-tM-9xv.text" = "Title";
+"clw-tM-9xv.text" = "Titre";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "e9b-Rk-x6K"; */
-"e9b-Rk-x6K.text" = "Title";
+"e9b-Rk-x6K.text" = "Titre";
 
 /* Class = "UILabel"; text = "Subtitle"; ObjectID = "fob-5g-Bc7"; */
-"fob-5g-Bc7.text" = "Subtitle";
+"fob-5g-Bc7.text" = "Sous-titre";
 
 /* Class = "UITextField"; placeholder = "Search"; ObjectID = "ijD-bp-vg1"; */
 "ijD-bp-vg1.placeholder" = "Search";
