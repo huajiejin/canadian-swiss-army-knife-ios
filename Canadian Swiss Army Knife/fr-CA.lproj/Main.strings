@@ -30,19 +30,19 @@
 "fob-5g-Bc7.text" = "Sous-titre";
 
 /* Class = "UITextField"; placeholder = "Search"; ObjectID = "ijD-bp-vg1"; */
-"ijD-bp-vg1.placeholder" = "Search";
+"ijD-bp-vg1.placeholder" = "Cherch";
 
 /* Class = "UITabBarItem"; title = "Unit Converter"; ObjectID = "khc-Ap-EXd"; */
-"khc-Ap-EXd.title" = "Unit Converter";
+"khc-Ap-EXd.title" = "Convertisseur";
 
 /* Class = "UIButton"; configuration.title = "Search"; ObjectID = "rs8-XC-nHV"; */
-"rs8-XC-nHV.configuration.title" = "Search";
+"rs8-XC-nHV.configuration.title" = "Cherch";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rs8-XC-nHV"; */
-"rs8-XC-nHV.normalTitle" = "Button";
+"rs8-XC-nHV.normalTitle" = "Bouton";
 
 /* Class = "UILabel"; text = "Subtitle"; ObjectID = "u8b-fu-mb1"; */
-"u8b-fu-mb1.text" = "Subtitle";
+"u8b-fu-mb1.text" = "Sous-titre";
 
 /* Class = "UILabel"; text = "inch"; ObjectID = "uIC-ng-8My"; */
-"uIC-ng-8My.text" = "inch";
+"uIC-ng-8My.text" = "pouce";
