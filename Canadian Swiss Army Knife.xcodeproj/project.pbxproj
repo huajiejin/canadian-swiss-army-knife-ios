@@ -23,6 +23,7 @@
 		3C3C8837294132F000667C3C /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C8836294132F000667C3C /* CameraPreviewView.swift */; };
 		3CA8A42A2941C49D003F9D42 /* Localizable.strings in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CA8A4282941C49D003F9D42 /* Localizable.strings */; };
 		3CE5FD892941C00800AD60F1 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE5FD882941C00800AD60F1 /* LocalizedStrings.swift */; };
+		3CFDF7EC2943D95A004B1979 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDF7EB2943D95A004B1979 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +60,7 @@
 		3CE5FD862941BEE800AD60F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		3CE5FD872941BF3400AD60F1 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Main.strings"; sourceTree = "<group>"; };
 		3CE5FD882941C00800AD60F1 /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
+		3CFDF7EB2943D95A004B1979 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				3C141EC7293D491B00F532CB /* Info.plist */,
 				3C141EBF293D491A00F532CB /* Canadian_Swiss_Army_Knife.xcdatamodeld */,
 				3CE5FD882941C00800AD60F1 /* LocalizedStrings.swift */,
+				3CFDF7EB2943D95A004B1979 /* Utils.swift */,
 			);
 			path = "Canadian Swiss Army Knife";
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				3C141EB7293D491A00F532CB /* AppDelegate.swift in Sources */,
 				3C3C882D29404F6800667C3C /* UnitConverterCollectionViewCell.swift in Sources */,
 				3C3C8837294132F000667C3C /* CameraPreviewView.swift in Sources */,
+				3CFDF7EC2943D95A004B1979 /* Utils.swift in Sources */,
 				3C141EB9293D491A00F532CB /* SceneDelegate.swift in Sources */,
 				3C141ECE293D4A2200F532CB /* UnitConverterViewController.swift in Sources */,
 				3C3C8832294060E400667C3C /* LengthUnitConverterDetailViewController.swift in Sources */,

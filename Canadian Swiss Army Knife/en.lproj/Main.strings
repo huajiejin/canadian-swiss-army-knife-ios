@@ -39,7 +39,7 @@
 "rs8-XC-nHV.configuration.title" = "Search";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "rs8-XC-nHV"; */
-"rs8-XC-nHV.normalTitle" = "Button";
+"rs8-XC-nHV.normalTitle" = "Search";
 
 /* Class = "UILabel"; text = "Subtitle"; ObjectID = "u8b-fu-mb1"; */
 "u8b-fu-mb1.text" = "Subtitle";

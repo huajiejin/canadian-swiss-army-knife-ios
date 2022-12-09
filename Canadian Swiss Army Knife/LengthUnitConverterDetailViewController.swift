@@ -27,18 +27,25 @@ class LengthUnitConverterDetailViewController: UIViewController {
             return length.converted(to: .inches).value
         }
     }
+    var lengthInInchesText: String {
+        get { return Utils.numberFormatter.string(from: NSNumber(value: lengthInInches)) ?? "" }
+    }
+    var lengthInCentimetersText: String {
+        get { return Utils.numberFormatter.string(from: NSNumber(value: lengthInCentimeters)) ?? "" }
+    }
+
     var selectedUnitConversionRecordIndexPath: IndexPath?
     
     @IBAction func cmEditingDidEnd(_ sender: Any) {
         length = Measurement(value: textToDouble(lengthInCentimetersTextField.text), unit: .centimeters)
-        lengthInInchesTextField.text = "\(lengthInInches)"
-        createUnitConversionRecord("\(lengthInCentimeters)", "cm", "\(lengthInInches)", LocalizedStrings.inch)
+        lengthInInchesTextField.text = lengthInInchesText
+        createUnitConversionRecord(lengthInCentimetersText, "cm", lengthInInchesText, LocalizedStrings.inch)
     }
     
     @IBAction func inchEditingDidEnd(_ sender: Any) {
         length = Measurement(value: textToDouble(lengthInInchesTextField.text), unit: .inches)
-        lengthInCentimetersTextField.text = "\(lengthInCentimeters)"
-        createUnitConversionRecord("\(lengthInInches)", LocalizedStrings.inch, "\(lengthInCentimeters)", "cm")
+        lengthInCentimetersTextField.text = lengthInCentimetersText
+        createUnitConversionRecord(lengthInInchesText, LocalizedStrings.inch, lengthInCentimetersText, "cm")
     }
     
     override func viewDidLoad() {
