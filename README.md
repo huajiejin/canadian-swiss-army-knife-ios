@@ -11,6 +11,9 @@ We want to show you how we collaborate on GitHub, using pull requests.
 - [Tim Jo](https://github.com/tim00vj)
 - [Mengcheng Liu](https://github.com/Liuguo320)
 
+## Demo
+![Final Project Demo](./Screenshots/Final%20Project%20Demo.gif)
+
 ## Requirements
 
 > This group project is the pinnacle of your work in the course. Based on your experience in using mobile phones you must invent your own solution for the any problem that can be solved using iPhone. You will not be limited with the topic of your solution.
@@ -89,3 +92,14 @@ The fourth tool (Map) will show users the map of Waterloo Park.
 - Navigation controller: Implemented in the search screen.
 - Use of Core Data: Introduced in both search history and unit conversion history.
 - Use of maps and cameras: Done in the CameraViewController and MapViewController.
+
+## Screenshots
+
+![Search Screen](./Screenshots/Final%20Project%201.png)
+![Delete Search Record](./Screenshots/Final%20Project%202.png)
+![Search Result](./Screenshots/Final%20Project%203.png)
+![Search Suggestions Loading From Server](./Screenshots/Final%20Project%204.png)
+![Search Suggestions](./Screenshots/Final%20Project%205.png)
+![Unit Converter Menu](./Screenshots/Final%20Project%206.png)
+![Unit Converter for Length](./Screenshots/Final%20Project%207.png)
+![Map for Waterloo Park](./Screenshots/Final%20Project%208.png)
