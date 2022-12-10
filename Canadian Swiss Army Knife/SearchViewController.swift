@@ -27,6 +27,9 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let rightButton = UIBarButtonItem(image: UIImage(systemName: "circle"), style: .plain, target: self, action: #selector(self.navigateToSearchRecordsFromJSONServerView))
+        navigationItem.rightBarButtonItem = rightButton
+        
         guard container != nil else {
             fatalError("Persistent container is required.")
         }
@@ -39,6 +42,10 @@ class SearchViewController: UIViewController {
         searchHistoryTable.addGestureRecognizer(UILongPressGestureRecognizer(target: self, action: #selector(self.onSearchHistoryTableLongPressed(longPressGesture:))))
         
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.onViewTapped(tapGesture:))))
+    }
+    
+    @objc func navigateToSearchRecordsFromJSONServerView() {
+        self.performSegue(withIdentifier: "SearchRecordsFromJSONServer", sender: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,6 +69,8 @@ class SearchViewController: UIViewController {
                 searchResultViewController.searchText = searchRecord.searchText ?? ""
                 searchResultViewController.searchField = searchRecord.searchField ?? ""
             }
+        case "SearchRecordsFromJSONServer":
+            break
         default:
             preconditionFailure("Unexpected segue id")
         }

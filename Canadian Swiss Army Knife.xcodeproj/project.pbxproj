@@ -23,6 +23,7 @@
 		3C3C8837294132F000667C3C /* CameraPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3C8836294132F000667C3C /* CameraPreviewView.swift */; };
 		3CA8A42A2941C49D003F9D42 /* Localizable.strings in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3CA8A4282941C49D003F9D42 /* Localizable.strings */; };
 		3CE5FD892941C00800AD60F1 /* LocalizedStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE5FD882941C00800AD60F1 /* LocalizedStrings.swift */; };
+		3CF690AF2945056C0009617C /* SearchRecordsFromJSONServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CF690AE2945056C0009617C /* SearchRecordsFromJSONServerViewController.swift */; };
 		3CFDF7EC2943D95A004B1979 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFDF7EB2943D95A004B1979 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		3CE5FD862941BEE800AD60F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		3CE5FD872941BF3400AD60F1 /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Main.strings"; sourceTree = "<group>"; };
 		3CE5FD882941C00800AD60F1 /* LocalizedStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStrings.swift; sourceTree = "<group>"; };
+		3CF690AE2945056C0009617C /* SearchRecordsFromJSONServerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRecordsFromJSONServerViewController.swift; sourceTree = "<group>"; };
 		3CFDF7EB2943D95A004B1979 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 				3C141EB6293D491A00F532CB /* AppDelegate.swift */,
 				3C141EB8293D491A00F532CB /* SceneDelegate.swift */,
 				3C141EBA293D491A00F532CB /* SearchViewController.swift */,
+				3CF690AE2945056C0009617C /* SearchRecordsFromJSONServerViewController.swift */,
 				3C3C882A29403CB300667C3C /* SearchResultViewController.swift */,
 				3C141ECD293D4A2200F532CB /* UnitConverterViewController.swift */,
 				3C3C8830294060E400667C3C /* LengthUnitConverterDetailViewController.swift */,
@@ -190,6 +193,7 @@
 			files = (
 				3C141EBB293D491A00F532CB /* SearchViewController.swift in Sources */,
 				3C141EC1293D491A00F532CB /* Canadian_Swiss_Army_Knife.xcdatamodeld in Sources */,
+				3CF690AF2945056C0009617C /* SearchRecordsFromJSONServerViewController.swift in Sources */,
 				3C141EB7293D491A00F532CB /* AppDelegate.swift in Sources */,
 				3C3C882D29404F6800667C3C /* UnitConverterCollectionViewCell.swift in Sources */,
 				3C3C8837294132F000667C3C /* CameraPreviewView.swift in Sources */,

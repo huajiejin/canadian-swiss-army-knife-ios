@@ -250,11 +250,77 @@
                         <outlet property="searchFieldPicker" destination="5uV-tJ-I6k" id="QJX-mf-Mhf"/>
                         <outlet property="searchHistoryTable" destination="zBw-Kc-db5" id="bBk-7Z-9VE"/>
                         <outlet property="searchTextField" destination="ijD-bp-vg1" id="QLT-Sp-c3R"/>
+                        <segue destination="5m1-rm-rMl" kind="show" identifier="SearchRecordsFromJSONServer" id="5rC-sv-vfr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VUA-qQ-FAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1521" y="-223"/>
+            <point key="canvasLocation" x="1520" y="-223"/>
+        </scene>
+        <!--Search Records FromJSON Server View Controller-->
+        <scene sceneID="l50-pj-ldd">
+            <objects>
+                <viewController id="5m1-rm-rMl" customClass="SearchRecordsFromJSONServerViewController" customModule="Canadian_Swiss_Army_Knife" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r9u-zq-cHp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="M4e-Rb-lab">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="UvK-JV-w3t">
+                                    <rect key="frame" x="0.0" y="121.66666793823242" width="393" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchRecordsFromJSONServer" textLabel="nnP-2E-gq7" detailTextLabel="JOD-aP-W5Z" style="IBUITableViewCellStyleValue2" id="GKB-i8-U4H">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GKB-i8-U4H" id="Smi-Ya-ala">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nnP-2E-gq7">
+                                                    <rect key="frame" x="20" y="15" width="91" height="15.666666666666666"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JOD-aP-W5Z">
+                                                    <rect key="frame" x="117" y="15" width="35" height="15.666666666666666"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="7eZ-gA-Ifl" kind="show" identifier="SearchResultFromSearchRecordsFromJSONServer" trigger="accessoryAction" id="maT-g9-gLc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Siw-WR-eg1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="M4e-Rb-lab" firstAttribute="leading" secondItem="Siw-WR-eg1" secondAttribute="leading" id="99j-og-Tc8"/>
+                            <constraint firstItem="M4e-Rb-lab" firstAttribute="top" secondItem="Siw-WR-eg1" secondAttribute="top" id="JT5-x5-iuu"/>
+                            <constraint firstItem="Siw-WR-eg1" firstAttribute="trailing" secondItem="M4e-Rb-lab" secondAttribute="trailing" id="dLi-YR-Reo"/>
+                            <constraint firstItem="Siw-WR-eg1" firstAttribute="bottom" secondItem="M4e-Rb-lab" secondAttribute="bottom" id="lbT-3M-dgY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="wmZ-ac-mJs"/>
+                    <connections>
+                        <outlet property="searchRecordsView" destination="M4e-Rb-lab" id="bEb-yi-g6I"/>
+                        <outlet property="searchRecordsViewLoadingIndicator" destination="UvK-JV-w3t" id="Mkl-sx-9WU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mat-fI-kf2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3007" y="-223"/>
         </scene>
         <!--Search Result-->
         <scene sceneID="kJp-D5-RA5">
@@ -444,7 +510,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="krK-fQ-loZ"/>
+        <segue reference="Zsb-1X-FEf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.left.and.right.square" catalog="system" width="128" height="114"/>
