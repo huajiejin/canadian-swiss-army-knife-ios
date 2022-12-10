@@ -27,7 +27,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let rightButton = UIBarButtonItem(image: UIImage(systemName: "circle"), style: .plain, target: self, action: #selector(self.navigateToSearchRecordsFromJSONServerView))
+        let rightButton = UIBarButtonItem(image: UIImage(systemName: "list.bullet.circle"), style: .plain, target: self, action: #selector(self.navigateToSearchRecordsFromJSONServerView))
         navigationItem.rightBarButtonItem = rightButton
         
         guard container != nil else {

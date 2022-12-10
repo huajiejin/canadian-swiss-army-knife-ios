@@ -2,6 +2,9 @@
 /* Class = "UINavigationItem"; title = "Search Result"; ObjectID = "3do-Jo-6i7"; */
 "3do-Jo-6i7.title" = "Search Result";
 
+/* Class = "UINavigationItem"; title = "Search Suggestions"; ObjectID = "wmZ-ac-mJs"; */
+"wmZ-ac-mJs.tltle" = "Search Suggestions 1";
+
 /* Class = "UITabBarItem"; title = "Camera"; ObjectID = "6T9-Fh-3vp"; */
 "6T9-Fh-3vp.title" = "Camera";
 
